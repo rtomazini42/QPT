@@ -30,8 +30,11 @@
 
           <div id="resultado">
             <p id="resultadoTexto">O quanto você precisa vai aparecer aqui!</p>
+            <br>
             <p id="resultadoPreciso">||</p>
+            <br>
             <p id="parecer">||</p>
+            <br>
           </div>
           <button id="calcular">Calcular</button>
     </div>
@@ -49,8 +52,8 @@
       
           var media = (valores[0] + valores[1]) / 2;
           var qntFalt = 10.0 - media;
-          document.getElementById('resultadoTexto').textContent = "A média dos dois maiores valores é: " + media.toFixed(2);
-          document.getElementById('resultadoPreciso').textContent = "O resultado preciso na prova final é: " + qntFalt.toFixed(2);
+          document.getElementById('resultadoTexto').textContent = "A média dos dois maiores valores, ou seja sua nota, é: " + media.toFixed(2);
+          document.getElementById('resultadoPreciso').textContent = "O resultado que você precisa na prova final é: " + qntFalt.toFixed(2);
 
           if (media > 6.9){
             document.getElementById('parecer').textContent = "Tu já passou";
