@@ -1,0 +1,71 @@
+body{
+    background-image: url("https://unsplash.com/photos/1K9T5YiZ2WU/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTc4fHxzYWR8cHR8MHx8fHwxNzA5NTg3OTc3fDA&force=true"); 
+    background-position-y: center;
+    background-size: contain;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+h1{
+    font-weight: 900;
+    font-size: xxx-large;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 3rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    }
+
+#conteudo{
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 3rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  /* Media query para dispositivos de tela menores que 600px */
+  @media screen and (max-width: 600px) {
+    th, td {
+      display: block;
+      width: 100%;
+    }
+    tr {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+button {
+    font-size: large;
+    font-weight: 600;
+    padding: 1rem;
+    background-color: white;
+    color: black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+#resultado{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}

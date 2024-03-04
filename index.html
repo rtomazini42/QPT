@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QPT</title>
+    <link rel="icon" type="image/x-icon" href="icons/sadicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <div id="titulo1">
+        <header>
+            <h1>Quanto eu preciso tirar na final?</h1>
+        </header>
+    </div>
+    <div id = "conteudo">
+        <table>
+            <tbody>
+              <tr>
+                <td><input type="number" id="va1" placeholder="1VA"></td>
+                <td><input type="number" id="va2" placeholder="2VA"></td>
+                <td><input type="number" id="va3" placeholder="3VA"></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div id="resultado">
+            <p id="resultadoTexto">O quanto você precisa vai aparecer aqui!</p>
+            <p id="resultadoPreciso">||</p>
+            <p id="parecer">||</p>
+          </div>
+          <button id="calcular">Calcular</button>
+    </div>
+
+    <script>
+        document.getElementById('calcular').addEventListener('click', function() {
+          var va1 = parseFloat(document.getElementById('va1').value);
+          var va2 = parseFloat(document.getElementById('va2').value);
+          var va3 = parseFloat(document.getElementById('va3').value);
+      
+          var valores = [va1, va2, va3];
+          valores.sort(function(a, b) {
+            return b - a;
+          });
+      
+          var media = (valores[0] + valores[1]) / 2;
+          var qntFalt = 10.0 - media;
+          document.getElementById('resultadoTexto').textContent = "A média dos dois maiores valores é: " + media.toFixed(2);
+          document.getElementById('resultadoPreciso').textContent = "O resultado preciso na prova final é: " + qntFalt.toFixed(2);
+
+          if (media > 6.9){
+            document.getElementById('parecer').textContent = "Tu já passou";
+          }
+          else if(media < 6.9 && media > 5.0){
+            document.getElementById('parecer').textContent = "Não tá difícil, tente!";
+          }
+          else if(media < 4.9 && media > 2.9){
+            document.getElementById('parecer').textContent = "Complicado...";
+          }
+          else if(media < 2.9 && media > 0){
+            document.getElementById('parecer').textContent = "Você não pode nem tentar, boa sorte na próxima";
+          }
+          else if(isNaN(media)){
+            document.getElementById('parecer').textContent = "Você nem digitou números!";
+          }
+          else if(media<0){
+            document.getElementById('parecer').textContent = "Como você conseguiu média negativa?";
+          }
+        });
+      </script>
+</body>
+</html>
